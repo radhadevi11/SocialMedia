@@ -27,8 +27,8 @@ public class UserRestController {
     }
 
     @PostMapping (consumes = "application/json", produces = "application/json")
-    public void save (@RequestBody UserEntity userEntity) {
-        ResponseEntity.created(null);
+    public UserEntity save (@RequestBody UserEntity userEntity) {
+        return userService.saveUser(userEntity);
     }
 
     @DeleteMapping (path = "/users/{id}")

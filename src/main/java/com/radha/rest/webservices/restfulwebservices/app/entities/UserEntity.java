@@ -14,6 +14,13 @@ public class UserEntity {
     private String name;
     private LocalDate birthDate;
 
+    public UserEntity() {
+    }
+
+    public UserEntity(int id) {
+        this.id = id;
+    }
+
     public UserEntity(int id, String name, LocalDate birthDate) {
         this.id = id;
         this.name = name;
